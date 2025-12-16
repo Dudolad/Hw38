@@ -26,4 +26,4 @@ bool Request::operator<(const Request& other) const {
         flightDate.year == other.flightDate.year)
         return id < other.id;
     return false;
-}
+}                                                        
