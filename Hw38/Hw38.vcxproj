@@ -124,6 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Hw38.cpp" />
+    <ClCompile Include="Request.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Request.h" />
