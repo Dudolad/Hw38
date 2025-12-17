@@ -7,6 +7,18 @@ Request::Request(const std::string& dest, const std::string& pass, const Date& d
     id = ++counter;
 }
 
+int Request::getId() const {
+    return id;
+}
+
+std::string Request::getDestination() const {
+    return destination;
+}
+
+Date Request::getFlightDate() const {
+    return flightDate;
+}
+
 void Request::print() const {
     std::cout << "ID: " << id
         << " | Destination: " << destination

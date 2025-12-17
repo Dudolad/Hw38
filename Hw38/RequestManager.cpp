@@ -25,7 +25,7 @@ void deleteRequest(RequestSet& requests) {
     cin >> id;
 
     for (auto it = requests.begin(); it != requests.end(); ++it) {
-        if (it->id == id) {
+        if (it->getId() == id) {
             requests.erase(it);
             cout << "Request deleted.\n";
             return;
@@ -42,7 +42,7 @@ void printByDestination(const RequestSet& requests) {
 
     bool found = false;
     for (const auto& r : requests) {
-        if (r.destination == dest) {
+        if (r.getDestination() == dest) {
             r.print();
             found = true;
         }
@@ -63,7 +63,7 @@ void countRequests(const RequestSet& requests) {
 
     int count = 0;
     for (const auto& r : requests) {
-        if (r.destination == dest && !(r.flightDate < start) && !(end < r.flightDate)) {
+        if (r.getDestination() == dest && !(r.getFlightDate() < start) && !(end < r.getFlightDate())) {
             count++;
         }
     }

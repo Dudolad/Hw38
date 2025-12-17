@@ -21,13 +21,17 @@ struct Date {
 class Request {
 private:
 	static int counter;
-public:
 	int id;
 	std::string destination;
 	std::string passenger;
 	Date flightDate;
+public:
 
 	Request(const std::string& dest, const std::string& pass, const Date& date);
+
+	int getId() const;
+	std::string getDestination() const;
+	Date getFlightDate() const;
 
 	void print() const;
 
